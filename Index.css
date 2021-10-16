@@ -1,0 +1,1407 @@
+/*Sirve para enviar al fondo el footer*/
+html {
+  min-height: 100%;
+  position: relative; /*Envia el footer hasta abajo*/
+}
+
+/*Para configurar la pagina en Generaal*/
+body {
+  margin: 0; /*Para Quitar el margen del cuerpo*/
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: lightgoldenrodyellow;
+}
+
+/*Para configuracion general de las barras de redes*/
+.barraRedes {
+  position: fixed; /*Para que este fija la barra*/
+  top: 300px; /*Para posicionar al centro toda la barra*/
+  z-index: 100; /*Para pasar por encima del fondo de la pagina la barra*/
+  left: 0; /*Para colocarlo bien pegado a la izquierda y no se vaya a mover*/
+}
+
+/*Para la barra de Facebook*/
+#facebook a{
+  background: #313945; /*Color del cuadrito de la letra f*/
+  padding:10px 20px; /*Sirve para el cuadrito azul de fondo, el primero es izquierda y derecha y el segundo arriba y abajo*/
+  color:lightgoldenrodyellow;/*Color de la letra*/
+  text-decoration: none;
+  width: 55px; /*Para el ancho del cuadro*/
+  text-align: center; /*alinear la f*/
+  transition: all .5s ease;
+}
+
+/*Cusando se pase el mouse ssobre la barra de Facebook*/
+#facebook a:hover {
+  background: #000000;
+  padding: 10px 50px;
+  color: lightgoldenrodyellow;
+}
+
+/*Para la barra de Instagram*/
+#Instagram a {
+  background: #e95950;
+  padding: 10px 20px;
+  color: lightgoldenrodyellow;
+  text-decoration: none;
+  width: 55px;
+  text-align: center;
+  transition: all .5s ease;
+}
+
+/*Cuando se pase el mouse sobre la barra Instagram*/
+#Instagram a:hover {
+  background: #000;
+  padding: 10px 50px;
+  color: lightgoldenrodyellow;
+}
+
+/*Para la barra de Whatsapp*/
+#Whatsapp a {
+  background: #7d7;
+  padding: 10px 20px;
+  color:lightgoldenrodyellow;
+  text-decoration: none;
+  width: 55px;
+  text-align: center;
+  transition: all .5s ease;
+}
+
+/*Cuando se pase el mouse sobre barra de Whatsapp*/
+#Whatsapp a:hover {
+  background: #000;
+  padding: 10px 50px;
+  color: lightgoldenrodyellow;
+  text-align: center;
+}
+
+/*Investigar para que se usa*/
+.menu_bar {
+	display:none;
+}
+
+
+/*Para editar todo el fondo de menu y otras configuraciones del mismo*/
+header nav {
+ /* border-left: blue 5px solid;*/
+	background:#313945;
+	width:100%;/*Mover hacia la derecha el menu*/
+  position: fixed;
+  text-align: center;
+  top: 0px;
+  font-size: 14px;
+  color: black;
+}
+
+/*Sirve para ocultar la opcion menu mientras la pantalla sea grande*/
+header nav ul {
+	list-style:none;
+}
+/*Para Alinear el Menu*/
+header nav ul li {
+	display:inline-block;
+	position: relative;
+}
+
+/*Para configurar el menu cuando el mouse haga contacto con el*/
+header nav ul li:hover {
+   width: 230px;/*Ancho al señalar la opcion*/
+   background:black;
+}
+
+/*PARA CONFIGURAR LAS LETRAS DEL MENU*/
+header nav ul li a {
+	color: white;
+	display:block;
+	text-decoration:none;
+	padding: 20px;
+}
+
+/*Para mostrar el submenu cuando el mouse realize el contacto con el*/
+header nav ul li:hover .children {
+	display:block;
+}
+
+/*Ocultar el submenu y ponerlo en la opcion correcta*/
+header nav ul li .children {
+  margin: center;
+	display: none;
+	background:#313945;
+	position: absolute;
+	width: 100%; /*Ancho del Padding del submenu*/
+  height: 900%; /*Altura del Padding del submenu*/
+  z-index:1000;
+  overflow: scroll;
+}
+
+/*Para configurar la parte interna del submenu*/
+header nav ul li .children li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 0.5px solid rgba(255,255,255,.5);/*Lineas de separacion del padding submenu*/
+}
+
+/* Configura el submenu, como los iconos, etc.*/
+header nav ul li .children li a span {
+	float: left;
+	position: relative;
+	top:3px;
+	margin-right:0;
+	margin-left:5px;
+}
+
+
+header nav ul li .caret {
+	position: relative;
+	top:3px;
+	margin-left:10px;
+	margin-right:0px;
+}
+
+.slider {
+  width: 95%;
+  margin: auto; /*Para centrar el slider*/
+  height: 400px; /*Atura del Slider*/
+  overflow: hidden; /*Para tapar las imagenes que salen de la pantalla*/
+}
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%; /*espacio de ancho usado para las imagenes*/
+
+ animation: cambio 20s infinite alternate;
+  animation-timing-function: ease;
+}
+
+@keyframes cambio {
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+  
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+
+.slider img {
+  margin: auto; /*Para quitarle los margenes a las imagenes en el slider*/
+  width: 100%;
+  height: 500px;
+}
+
+#clock {
+  width: 50%;
+  box-shadow: 5px 5px 5px gray;
+  background: black;
+  color: white;
+  font-size: 5em;
+  text-align: center;
+  margin: auto;
+}
+
+.linea {
+ border-top: 1px solid #7d7;
+}
+
+/*Para editar el h3*/
+h3 {
+  word-spacing: 2cm;
+  width: 50%;
+  background: white;
+  color: orange;
+  font-size: 12px;
+  text-align: center;
+  margin: auto;
+}
+
+h2 {
+  clear: both;
+  margin-left: 85px;
+}
+
+img {
+  margin-bottom: 20px;
+}
+
+p.izquierda {
+margin-left: 50px;
+}
+
+p.derecha {
+  margin-right: 10px;
+}
+
+img.izquierda {
+  float: left;
+  margin-right: 20px;
+  margin-left: 50px;
+}
+
+img.derecha {
+  float: right;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/*Para Pantallas menores a 1024px*/
+@media (max-width: 1024px){
+ /*Para el menu*/
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+  /*Para configurar las letras del submenu y menu principal*/
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+  header nav ul li:hover {
+    width: 100%;/*Ancho al señalar la opcion*/
+    background:#393635;
+  }
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+  .slider {
+    width: 95%;
+  }
+
+  .slider img {
+    width: 100%;
+  height: 500px;
+  }
+
+  /*Para pantalla menor a 1024px*/
+  #clock {
+    margin: 50%;
+    word-spacing: 1.3cm;
+    width: 80%;
+    height: 70px;
+    box-shadow: 10px 10px 10px gray;
+    background: black;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  h3 { /*letras del contador del reloj*/
+    word-spacing: 2.1cm;
+    width: 80%;
+    height: 20px;
+    box-shadow: 10px 3px 3px gray;
+    background: black;
+    color: orange;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+  @media (max-width: 1000px) {
+    /*Para el menu*/
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+  /*Para configurar las letras del submenu y menu principal*/
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+  header nav ul li:hover {
+    width: 100%;/*Ancho al señalar la opcion*/
+    background:#393635;
+  }
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+  .slider {
+    width: 95%;
+  }
+
+  .slider img {
+    width: 100%;
+  height: 500px;
+  }
+
+  #clock {
+    margin: 50%;
+    word-spacing: 1.3cm;
+    width: 80%;
+    height: 70px;
+    box-shadow: 10px 10px 10px gray;
+    background: black;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  h3 { /*letras del contador del reloj*/
+    word-spacing: 2.1cm;
+    width: 80%;
+    height: 20px;
+    box-shadow: 10px 3px 3px gray;
+    background: black;
+    color: orange;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+    }
+  }
+
+  @media (max-width: 900px) {
+    /*Para el menu*/
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+  /*Para configurar las letras del submenu y menu principal*/
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+  header nav ul li:hover {
+    width: 100%;/*Ancho al señalar la opcion*/
+    background:#393635;
+  }
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+  .slider {
+    width: 95%;
+  }
+
+  .slider img {
+    width: 100%;
+  height: 500px;
+  }
+
+  /*Para pantalla menor a 1024px*/
+  #clock {
+    margin: 50%;
+    word-spacing: 1.3cm;
+    width: 80%;
+    height: 70px;
+    box-shadow: 10px 10px 10px gray;
+    background: black;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  h3 { /*letras del contador del reloj*/
+    word-spacing: 2.1cm;
+    width: 80%;
+    height: 20px;
+    box-shadow: 10px 3px 3px gray;
+    background: black;
+    color: orange;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+   }
+  }
+
+  @media (max-width: 800px) {
+    /*Para el menu*/
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+  /*Para configurar las letras del submenu y menu principal*/
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+  header nav ul li:hover {
+    width: 100%;/*Ancho al señalar la opcion*/
+    background:#393635;
+  }
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+  .slider {
+    width: 95%;
+  }
+
+  .slider img {
+    width: 100%;
+  height: 500px;
+  }
+
+  /*Para pantalla menor a 1024px*/
+  #clock {
+    margin: 50%;
+    word-spacing: 1.3cm;
+    width: 80%;
+    height: 70px;
+    box-shadow: 10px 10px 10px gray;
+    background: black;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  h3 { /*letras del contador del reloj*/
+    word-spacing: 2.1cm;
+    width: 80%;
+    height: 20px;
+    box-shadow: 10px 3px 3px gray;
+    background: black;
+    color: orange;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+  }
+  }
+
+  @media (max-width: 700px) {
+    /*Para el menu*/
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+  /*Para configurar las letras del submenu y menu principal*/
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+  header nav ul li:hover {
+    width: 100%;/*Ancho al señalar la opcion*/
+    background:#393635;
+  }
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+  .slider {
+    width: 95%;
+  }
+
+  .slider img {
+    width: 100%;
+  height: 500px;
+  }
+
+  /*Para pantalla menor a 1024px*/
+  #clock {
+    margin: 50%;
+    word-spacing: 1.3cm;
+    width: 80%;
+    height: 70px;
+    box-shadow: 10px 10px 10px gray;
+    background: black;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  h3 { /*letras del contador del reloj*/
+    word-spacing: 2.1cm;
+    width: 80%;
+    height: 20px;
+    box-shadow: 10px 3px 3px gray;
+    background: black;
+    color: orange;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+  }
+  }
+
+  @media (max-width: 600px) {
+    /*Para el menu*/
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+  /*Para configurar las letras del submenu y menu principal*/
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+  header nav ul li:hover {
+    width: 100%;/*Ancho al señalar la opcion*/
+    background:#393635;
+  }
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+  .slider {
+    width: 95%;
+  }
+
+  .slider img {
+    width: 100%;
+  height: 500px;
+  }
+
+  /*Para pantalla menor a 1024px*/
+  #clock {
+    margin: 50%;
+    word-spacing: 1.3cm;
+    width: 80%;
+    height: 70px;
+    box-shadow: 10px 10px 10px gray;
+    background: black;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  h3 { /*letras del contador del reloj*/
+    word-spacing: 2.1cm;
+    width: 80%;
+    height: 20px;
+    box-shadow: 10px 3px 3px gray;
+    background: black;
+    color: orange;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+  }
+  }
+
+  /*Para Pantallas menores a 500px*/
+  @media (max-width: 500px) {
+    /*Para el menu*/
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+  /*Para configurar las letras del submenu y menu principal*/
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+  header nav ul li:hover {
+    width: 100%;/*Ancho al señalar la opcion*/
+    background:#393635;
+  }
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+  .slider {
+    width: 95%;
+  }
+
+  .slider img {
+    width: 100%;
+  height: 500px;
+  }
+
+  /*Para pantalla menor a 1024px*/
+  #clock {
+    margin: 50%;
+    word-spacing: 1.3cm;
+    width: 80%;
+    height: 70px;
+    box-shadow: 10px 10px 10px gray;
+    background: black;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+  }
+    
+    h3 {
+      word-spacing: 1.4cm;
+      width: 80%;
+      height: 20px;
+      box-shadow: 10px 3px 3px gray;
+      background: black;
+      color: orange;
+      font-size: 12px;
+      text-align: center;
+      margin: auto;
+    }
+
+    .slider li {
+      width: 100%;
+      list-style: none;
+    }
+  }
+
+  @media(max-width: 400px) {
+    /*Para el menu*/
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+  /*Para configurar las letras del submenu y menu principal*/
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+  header nav ul li:hover {
+    width: 100%;/*Ancho al señalar la opcion*/
+    background:#393635;
+  }
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+  .slider {
+    width: 95%;
+  }
+
+  .slider img {
+    width: 100%;
+  height: 500px;
+  }
+
+  /*Para pantalla menor a 1024px*/
+  #clock {
+    margin: 50%;
+    word-spacing: 1.3cm;
+    width: 80%;
+    height: 70px;
+    box-shadow: 10px 10px 10px gray;
+    background: black;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  h3 { /*letras del contador del reloj*/
+    word-spacing: 2.1cm;
+    width: 80%;
+    height: 20px;
+    box-shadow: 10px 3px 3px gray;
+    background: black;
+    color: orange;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+  }
+
+    p.izquierda {
+      text-align: center;
+      }
+      
+      p.derecha {
+      text-align: center;
+      }
+  }
+
+  /*Para Pantallas menores de 300px*/
+  @media (max-width: 300px) {
+    /*Para el menu*/
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+  /*Para configurar las letras del submenu y menu principal*/
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+  header nav ul li:hover {
+    width: 90%;/*Ancho al señalar la opcion*/
+    background:#393635;
+  }
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+  img {
+    width: 30px;
+  }
+
+  .slider img {
+    width: 100%;
+  height: 300px;
+  }
+
+    #clock {
+      margin-top: -30%;
+      word-spacing: .7cm;
+      width: 80%;
+      height: 30px;
+      box-shadow: 10px 10px 10px gray;
+      background: black;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+    }
+    
+    h3 {
+      word-spacing: .85cm;
+      width: 80%;
+      height: 20px;
+      box-shadow: 10px 3px 3px gray;
+      background: black;
+      color: orange;
+      font-size: 8px;
+      text-align: center;
+      margin: auto;
+    }
+  }
+
+  /*Para Pantallas menores a 430px*/
+  @media (max-width: 200px) {
+    /*Para el menu*/
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+  /*Para configurar las letras del submenu y menu principal*/
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+  header nav ul li:hover {
+    width: 100%;/*Ancho al señalar la opcion*/
+    background:#393635;
+  }
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+  .slider {
+    width: 95%;
+  }
+
+  .slider img {
+    width: 100%;
+  height: 500px;
+  }
+
+    #clock {
+      word-spacing: 0.5cm;
+      width: 80%;
+      height: 30px;
+      box-shadow: 10px 10px 10px gray;
+      background: black;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      margin: auto;
+    }
+    
+    h3 {
+      word-spacing: 0.4cm;
+      width: 80%;
+      height: 20px;
+      box-shadow: 10px 3px 3px gray;
+      background: black;
+      color: orange;
+      font-size: 12px;
+      text-align: center;
+      margin: auto;
+    }
+    p.izquierda {
+      margin-left: auto;
+      margin-right: auto;
+      }
+      
+      p.derecha {
+      margin-left: auto;
+      margin-right: auto;
+      }
+  }
+
+  @media (max-width: 100px) {
+    /*Para el menu*/
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+  /*Para configurar las letras del submenu y menu principal*/
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+  header nav ul li:hover {
+    width: 100%;/*Ancho al señalar la opcion*/
+    background:#393635;
+  }
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+  img {
+    width: 200px;
+  }
+
+  .slider img {
+    width: 100%;
+  height: 500px;
+  }
+
+  /*Para pantalla menor a 1024px*/
+  #clock {
+    margin: 50%;
+    word-spacing: 1.3cm;
+    width: 80%;
+    height: 70px;
+    box-shadow: 10px 10px 10px gray;
+    background: black;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  h3 { /*letras del contador del reloj*/
+    word-spacing: 2.1cm;
+    width: 80%;
+    height: 20px;
+    box-shadow: 10px 3px 3px gray;
+    background: black;
+    color: orange;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+  }
+    p.izquierda {
+      margin-left: auto;
+      margin-right: auto;
+      }
+      
+      p.derecha {
+      margin-left: auto;
+      margin-right: auto;
+      }
+    }
